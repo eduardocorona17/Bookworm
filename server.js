@@ -3,10 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
+const passport = require('passport');
 var methodOverride = require('method-override');
+
+const isLoggedIn = require('./config/auth');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var booksRouter = require('./routes/books');
+var reviewsRouter = require('./routes/reviews');
 var app = express();
 
 //loads our env variables
@@ -14,6 +20,7 @@ require('dotenv').config();
 
 // connects us to database
 require('./config/database');
+require('./config/passport');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,11 +31,29 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(function (req, res, next) {
+  // add req.user to res.locals
+  res.locals.user = req.user;
+  next();
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
+app.use('/', reviewsRouter);
 app.use('/users', usersRouter);
+app.use('/books', booksRouter); //add isLoggedIn after books later
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
