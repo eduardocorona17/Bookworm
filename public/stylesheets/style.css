@@ -1,7 +1,14 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: bisque;
+  text-align: center;
 }
+.bookie {
+  text-align: center;
+}
+
+
 
 a {
   color: #00B7FF;
@@ -9,4 +16,69 @@ a {
 
 .login img {
   height: 30px;
+}
+
+#add-new-form {
+  font-family: Jazz LET, fantasy;
+  
+}
+
+label, div {
+  font-family: Jazz LET, fantasy;
+  font-size: 18px;
+  font-style: bold;
+}
+
+.buttons {
+  display: flex;
+}
+.add-review {
+  background-color: turquoise;
+  border-radius: 8px
+}
+.add-review {
+  transition-duration: 0.4s;
+  font-size: 15px;
+}  
+  
+.add-review:hover {
+  background-color: whitesmoke;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+#update-button {
+  transition-duration: 0.4s;
+  background-color: turquoise;
+  border-radius: 8px;
+  font-size: 15px;
+}
+#update-button:hover {
+  background-color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#remove-button {
+  transition-duration: 0.4s;
+  background-color: turquoise;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+#remove-button:hover {
+  background-color: red; 
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#submit-button {
+  transition-duration: 0.4s;
+  background-color: turquoise;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+#submit-button:hover {
+  color: whitesmoke;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

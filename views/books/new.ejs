@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+<link rel="stylesheet" href="mystyle.css">
 <form id="add-new-form" action="/books/new" method="POST">
     <label>Title:</label>
     <input type="text" name="title">
@@ -7,7 +8,7 @@
     <input type="text" name="releaseYear">
     <label>Author:</label>
     <input type="text" name="author">
-    <button type="submit">Submit</button>
+    <button id="submit-button" type="submit">Submit</button>
 
 </form>
 

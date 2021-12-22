@@ -1,4 +1,5 @@
 <%- include('../partials/header') %>
+<link rel="stylesheet" href="mystyle.css">
 <table id="list">
     <thead>
         <tr>
@@ -8,7 +9,8 @@
         
         </tr>
     </thead>
-    <tbody>
+    <tbody table style="text-align: center;">
+      
         <% books.forEach(function(b) { %>
             <tr>
             <td><%= b.title %></td>
@@ -17,7 +19,7 @@
             </tr>
         <% }); %>
     </tbody>
-</table>
 
+</table>
   
 <%- include('../partials/footer') %>
