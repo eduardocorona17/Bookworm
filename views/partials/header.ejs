@@ -8,19 +8,20 @@
   <title>Bookworm</title>
 </head>
 <body>
+  <h1>Bookworm</h1>
   <nav>
    
       <% if (user) { %>
-        
-      <a href="/books"	>
-      Book Library</a>
-      <a href="/books/new" >Add Books</a>
-      <a href="/logout">Log Out</a>
-      
+      <ul> 
+      <li><a href="/books">Book Library</a></li>
+      <li><a href="/books/new" >Add Books</a></li>
+      <li><a href="/logout">Log Out</a></li>
+      </ul>
     <% } else { %>
        
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
     <% } %>
+    </ul>
   </nav>
   <main>
  

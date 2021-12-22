@@ -9,13 +9,13 @@
         
         </tr>
     </thead>
-    <tbody table style="text-align: center;">
+    <tbody id="library-page" table style="text-align: center;">
       
         <% books.forEach(function(b) { %>
             <tr>
             <td><%= b.title %></td>
             
-            <td><a href="/books/<%= b._id %>">Details</a></td>
+            <td><a id="det-button" href="/books/<%= b._id %>">Details</a></td>
             </tr>
         <% }); %>
     </tbody>
