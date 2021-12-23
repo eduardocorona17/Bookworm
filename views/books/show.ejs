@@ -27,7 +27,7 @@
   </form>
   <% } %>
   <% if (book.reviews.length) { %>
-    <table>
+    <table class="review-user">
         <thead>
             <tr>
                 <th>User</th>
@@ -40,7 +40,7 @@
         <% book.reviews.forEach(function(r) { %>
             <% total += r.rating %>   
             <tr>
-                <td class="review-user"><%= r.userName %></td>
+                <td><%= r.userName %></td>
                 <td><%= r.createdAt.toLocaleDateString() %></td>
                 <td><%= r.content %></td>
                 <td><%= r.rating %></td>

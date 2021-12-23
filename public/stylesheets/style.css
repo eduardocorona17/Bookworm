@@ -41,6 +41,11 @@ a {
   height: 30px;
 }
 
+.review-user {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #add-new-form {
   font-family: Jazz LET, fantasy;
   
@@ -121,3 +126,4 @@ label, div {
 #show-book {
   margin-top: 18px;
 }
+
